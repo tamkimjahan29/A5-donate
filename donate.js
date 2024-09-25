@@ -67,6 +67,11 @@ document.getElementById('historyTab').addEventListener('click', function () {
 
     const donationTab=document.getElementById('donationTab');
         donationTab.classList.remove ("bg-green-500","text-black","font-semibold");
+
+    // hidden donation section
+    const sectionContainer =document.getElementById('section-container');
+    sectionContainer.classList.add('hidden');
+
         
 });
 
@@ -79,6 +84,8 @@ document.getElementById('donationTab').addEventListener('click',function(){
     const donationTab= document.getElementById('donationTab');
     donationTab.classList.add("bg-green-500","text-black","font-semibold");
     
+    const sectionContainer =document.getElementById('section-container');
+    sectionContainer.classList.remove('hidden');
 });
 
 
