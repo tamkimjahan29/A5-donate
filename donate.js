@@ -31,6 +31,12 @@ document.getElementById('donate-now-btn').addEventListener('click', function () 
     `
     historySection.appendChild(div);
 
+    
+     // modal code
+     const modal = document.getElementById('modal-section')
+     modal.classList.remove('hidden')
+     my_modal_4.showModal()
+
 
 })
 
@@ -71,6 +77,11 @@ document.getElementById('button-donate').addEventListener('click', function () {
     </div>
     `
     historySection.appendChild(div);
+
+    // modal code
+    const modal = document.getElementById('modal-section')
+    modal.classList.remove('hidden')
+    my_modal_4.showModal()
 })
 
 
@@ -110,6 +121,11 @@ document.getElementById('donate').addEventListener('click', function () {
     </div>
     `
     historySection.appendChild(div);
+
+    // modal code
+    const modal = document.getElementById('modal-section')
+    modal.classList.remove('hidden')
+    my_modal_4.showModal()
 })
 
 
@@ -142,6 +158,7 @@ document.getElementById('historyTab').addEventListener('click', function () {
         
 });
 
+
 // donation button
 
 document.getElementById('donationTab').addEventListener('click',function(){
@@ -161,35 +178,15 @@ document.getElementById('donationTab').addEventListener('click',function(){
 
 
 
+// modal remove after confirmation
+document.getElementById('modal-btn').addEventListener('click', function () {
+    const modal = document.getElementById('modal-section');
+    modal.classList.add('hidden')
+})
 
 
 
 
-
-
-
-
-
-
-
-
-// const historyTab = document.getElementById('historyTab');
-// const donationTab = document.getElementById('donation-tab');
-
-// historyTab.addEventListener("click", function(){
-//     historyTab.classList.add(
-//         " bg-green-500",
-//          "text-black",
-//         "font-semibold"
-//     );
-
-
-//     donationTab.classList.remove(
-//         " bg-green-500",
-//          "text-black",
-//         "font-semibold"
-//     );
-// })
 
  
 

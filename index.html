@@ -26,25 +26,28 @@
 </head>
 
 <body class="font-lexend ">
-    <header class="max-w-screen-xl mx-auto bg-[#F9F7F3] ">
-        <div class="navbar">
-            <div class="navbar-start">
-              <a class="btn btn-ghost text-xl">Blog</a>
-            </div>
-            <div class="navbar-center hidden lg:block">
-                <div class="flex items-center gap-2">
-                    <img class="w-10"  src="assets/logo.png" alt="">
-                <h2 class="font-bold">Donate Bangladesh</h2>
+    <header class="bg-[#F9F7F3] ">
+        <!-- nav section -->
+        <section  class="max-w-screen-xl mx-auto py-12">
+            <div class="navbar">
+                <div class="navbar-start ">
+                  <a href="Home.html"  class="btn btn-ghost text-xl bg-green-500">Blog</a>
                 </div>
-            </div>
-            <div class="navbar-end">
-                <img class="mr-2" src="assets/coin.png" alt="">
-                <h5 span id="balance"> 5500 </span> BDT </h5>
-            </div>
-          </div>
+                <div class="navbar-center hidden lg:block">
+                    <div class="flex items-center gap-3">
+                        <img class="w-10"  src="assets/logo.png" alt="">
+                    <h2 class="text-xl font-bold">Donate Bangladesh</h2>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <img class="mr-2" src="assets/coin.png" alt="">
+                    <h5 span id="balance"> 5500 </span> BDT </h5>
+                </div>
+              </div>
+        </section>
        
      <!-- button -->
-            <div class="flex justify-center gap-4 mt-10">
+            <div class="flex justify-center gap-4 pt-20 bg-white ">
                 <button id="donationTab"
                     class="text-black font-semibold mr-3 border-x-2 border-y-2 px-4 py-4 rounded-lg bg-green-500 focus:outline-none transition-colors duration-200 ">
                     Donation </button>
@@ -85,6 +88,8 @@
                         <button id="donate-now-btn"
                             class="w-full text-xl font-semibold bg-green-500 px-4 py-2 lg:px-8 lg:py-4 rounded-lg">
                             Donate Now </button>
+                          
+
 
                     </div>
                 </div>
@@ -158,6 +163,29 @@
             
             
         </section>
+
+          <!-- modal section -->
+    <section id="modal-section" class="hidden">
+        <!-- You can open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_4.showModal()"></button>
+        <dialog id="my_modal_4" class="modal">
+          <div class="modal-box w-4/12 max-w-5xl text-center">
+            <h3 class="text-2xl font-black mb-2">Congrates!</h3>
+            <div class="flex justify-center">
+              <img src="assets/coin.png" alt="">
+            </div>
+            <p class="py-4">You Have donate for Humankind</p>
+            <h3 class="text-2xl font-black mb-2">Successfully!</h3>
+            <div class="modal-action flex justify-center">
+              <form method="dialog">
+                <div>
+                  <button id="modal-btn" class="btn">Close confirmation</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
     </main>
     <script src="./donate.js"></script>
 </body>
