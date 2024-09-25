@@ -1,3 +1,5 @@
+// donate now btn for nowakhali
+
 document.getElementById('donate-now-btn').addEventListener('click', function () {
     const balance = parseFloat(document.getElementById('balance').innerText);
     const donationAmount = parseFloat(document.getElementById('donation-amount').value);
@@ -13,7 +15,27 @@ document.getElementById('donate-now-btn').addEventListener('click', function () 
 
     const newDonationAmount = donationAmountStudent + donationAmount;
     document.getElementById('donation-amount-student').innerText = newDonationAmount;
+
+
+    const nowakhaliText = document.getElementById('nowakhali-text').innerText;
+    let currentDate = new Date();
+   
+
+    const historySection = document.getElementById('history-section')
+    const div = document.createElement('div')
+    div.innerHTML=`
+    <div class="p-4 my-2 border-2 border-gray-200">
+    <p>${donationAmount} BDT donate for ${nowakhaliText}</p>
+    <p>${currentDate}</p>
+    </div>
+    `
+    historySection.appendChild(div);
+
+
 })
+
+
+
 
 document.getElementById('button-donate').addEventListener('click', function () {
 
@@ -31,7 +53,27 @@ document.getElementById('button-donate').addEventListener('click', function () {
 
     const newAmountDonate = amountDonate + donationStudent;
     document.getElementById('donation-student').innerText = newAmountDonate;
+
+
+
+    // create element
+    
+    const feniText = document.getElementById('feni-text').innerText;
+    let currentDate = new Date();
+   
+
+    const historySection = document.getElementById('history-section')
+    const div = document.createElement('div')
+    div.innerHTML=`
+    <div class="p-4 my-2 border-2 border-gray-200">
+    <p>${amountDonate} BDT donate for ${feniText}</p>
+    <p>${currentDate}</p>
+    </div>
+    `
+    historySection.appendChild(div);
 })
+
+
 
 document.getElementById('donate').addEventListener('click', function () {
 
@@ -50,6 +92,24 @@ document.getElementById('donate').addEventListener('click', function () {
 
     const newAmountDonate = amount + donation;
     document.getElementById('donation').innerText = newAmountDonate;
+
+    // create element
+    
+    // create element
+    
+    const studnetText = document.getElementById('studnet-text').innerText;
+    let currentDate = new Date();
+   
+
+    const historySection = document.getElementById('history-section')
+    const div = document.createElement('div')
+    div.innerHTML=`
+    <div class="p-4 my-2 border-2 border-gray-200">
+    <p>${amount} BDT donate for ${studnetText}</p>
+    <p>${currentDate}</p>
+    </div>
+    `
+    historySection.appendChild(div);
 })
 
 
@@ -72,6 +132,13 @@ document.getElementById('historyTab').addEventListener('click', function () {
     const sectionContainer =document.getElementById('section-container');
     sectionContainer.classList.add('hidden');
 
+
+    // remove history section hidden class
+
+    const  historySection = document.getElementById('history-section');
+    historySection.classList.remove('hidden');
+        
+
         
 });
 
@@ -86,6 +153,10 @@ document.getElementById('donationTab').addEventListener('click',function(){
     
     const sectionContainer =document.getElementById('section-container');
     sectionContainer.classList.remove('hidden');
+
+    const  historySection = document.getElementById('history-section');
+    historySection.classList.add('hidden');
+
 });
 
 
